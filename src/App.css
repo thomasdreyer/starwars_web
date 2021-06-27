@@ -1,38 +1,65 @@
+
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 6px #000;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #000;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1.5px 1.5px 1.5px 1.5px yellow;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.particless{
+position:fixed;
+top:0;
+right:0;
+bottom:0;
+left:0;
+z-index:-1;
+  background: black;
+}
+
 .App {
-  text-align: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100%;
+  padding: 0;
+    background: black;
+    opacity:0.9;
+    margin:10;
+}
+.backBtn{
+  width:200px;
+  height:50px;
+  border:1px solid yellow;
+  border-radius:2px;
+  color:yellow;
+  background:transparent;
+  margin-left:5px;
+  margin-right:5px;
+  font-size:22px;
+  margin-top:10px;
+  font-weight:600;
+  font-family:fantasy;
+}
+.backBtn:hover{
+  color:black;
+  background-color:yellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* On screens that are 992px or less*/
+@media screen and (max-width: 992px) {
+  .header{
+  font-family:'SEGA LOGO FONT';
+  color:yellow;
+  font-size: 3em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .header{
+  font-family:'SEGA LOGO FONT';
+  color:yellow;
+  font-size: 2em;
   }
 }
