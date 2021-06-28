@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {RootStateOrAny, useSelector, useDispatch } from 'react-redux'
 import { FaArrowAltCircleLeft,FaArrowAltCircleRight } from 'react-icons/fa';
-import { request, gql } from "graphql-request";
-import { useQuery } from "react-query";
+
 
 import { decrement, increment ,incrementByValue} from '../../counterSlice'
-import { setPerson,setPersonDetails} from '../../personSlice'
-import {URL} from '../../Constants';
-import Loading from '../Loading/Loading';
+
 
 
  export default function Paging({pageCount}) {
@@ -17,7 +14,7 @@ import Loading from '../Loading/Loading';
   console.log(pages)
   let pagin = [];
   for(let i =1 ; i<=pages;i++){
-    pagin.push(<button style={{
+    pagin.push(<button key={i} style={{
       width:30,
       border:'1px solid yellow',
       borderRadius:15,

@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment,incrementByValue} from '../../counterSlice'
-import { setPerson,setPersonDetails} from '../../personSlice'
+import { useDispatch } from 'react-redux'
+import { setPersonDetails} from '../../personSlice'
 import {FaSearch,FaRegWindowClose}  from 'react-icons/fa';
 import './Search.css';
 
 
 export default function Search(){
   const [search,setSearch] = useState('');
-  const count = useSelector((state:any) => state.counter.value);
-  const person = useSelector((state:any) => state.counter.person)
   const dispatch = useDispatch()
   const clear = () => {
           dispatch(setPersonDetails(''));
